@@ -9,14 +9,19 @@ package plegatfem;
  * @author jmb2
  */
 public class Node {
-    
-    private double x,y,z;
+
+    private double x, y, z;
     private String id;
 
-    public Node(String id,double x, double y) {
+    public Node(String id, double x, double y, double z) {
         this.x = x;
         this.y = y;
+        this.z = z;
         this.id = id;
+    }
+
+    public Node(String id, double x, double y) {
+        this(id, x, y, 0.);
     }
 
     public String getId() {
@@ -42,13 +47,23 @@ public class Node {
     public void setY(double y) {
         this.y = y;
     }
-    
-    public void setXY(double x,double y) {
+
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
+
+    public void setXYZ(double x, double y, double z) {
         this.x = x;
         this.y = y;
+        this.z = z;
     }
-    
-    
-    
-    
+
+    public void setXY(double x, double y) {
+        this.setXYZ(x, y, 0.);
+    }
+
 }

@@ -260,9 +260,9 @@ public class Problem {
                 this.solDisp.setVal(rank * 3 + 1, temp.getDy());
             }
 
-            if (temp.isDrDef()) {
+            if (temp.isDrzDef()) {
                 rankToDelete.add(rank * 3 + 2);
-                this.solDisp.setVal(rank * 3 + 2, temp.getDr());
+                this.solDisp.setVal(rank * 3 + 2, temp.getDrz());
             }
 
 

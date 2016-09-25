@@ -11,17 +11,20 @@ package plegatfem;
 public class NodeForce {
     
     private String nodeId;
-    private double fx,fy,mz;
+    private double fx,fy,fz,mx,my,mz;
 
-    public NodeForce(String nodeId, double fx, double fy, double mz) {
+    public NodeForce(String nodeId, double fx, double fy, double fz, double mx, double my, double mz) {
         this.nodeId = nodeId;
         this.fx = fx;
         this.fy = fy;
+        this.fz = fz;
+        this.mx = mx;
+        this.my = my;
         this.mz = mz;
     }
 
-    public NodeForce(int nodeIdInt, double fx, double fy, double mz) {
-        this(String.valueOf(nodeIdInt),fx,fy,mz);
+    public NodeForce(int nodeIdInt, double fx, double fy, double fz, double mx, double my, double mz) {
+        this(String.valueOf(nodeIdInt),fx,fy,fz,mx,my,mz);
     }
 
     public double getFx() {
@@ -38,6 +41,30 @@ public class NodeForce {
 
     public void setFy(double fy) {
         this.fy = fy;
+    }
+
+    public double getFz() {
+        return fz;
+    }
+
+    public void setFz(double fz) {
+        this.fz = fz;
+    }
+
+    public double getMx() {
+        return mx;
+    }
+
+    public void setMx(double mx) {
+        this.mx = mx;
+    }
+
+    public double getMy() {
+        return my;
+    }
+
+    public void setMy(double my) {
+        this.my = my;
     }
 
     public double getMz() {

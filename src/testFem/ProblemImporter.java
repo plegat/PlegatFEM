@@ -115,7 +115,7 @@ public class ProblemImporter {
                                     double fy=Double.valueOf(data[7]);
                                     double mz=Double.valueOf(data[8]);
                                     
-                                    NodeForce nfTemp=new NodeForce(data[0], fx,fy,mz);
+                                    NodeForce nfTemp=new NodeForce(data[0], fx,fy,0,0,0,mz);
                                     this.pb.addNodeLoad(nfTemp);
                                 }
 
