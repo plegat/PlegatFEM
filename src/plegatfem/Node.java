@@ -10,7 +10,7 @@ package plegatfem;
  */
 public class Node {
     
-    private double x,y;
+    private double x,y,z;
     private String id;
 
     public Node(String id,double x, double y) {
